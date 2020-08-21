@@ -21,6 +21,7 @@ pipeline {
         }
         stage('Build') {
             steps {
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh 'npm run build'
             }
         }
