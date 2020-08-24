@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker {
+        docker { // 利用本机的 docker 进行容器的部署？前提是将主机的 home 目录映射到 容器内的 home 目录？
             image 'node:6-alpine'
             args '-p 3000:3000'
         }
